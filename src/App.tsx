@@ -1,7 +1,9 @@
 // import { useState } from 'react'
 
 import "./App.css";
-import * as assets from "../src/assets"
+// import * as assets from "../src/assets"
+import LinkComponent from "./components/LinkComponent";
+
 
 function App() {
   return (
@@ -25,13 +27,10 @@ function App() {
             <span className="text-black"> books.</span>
           </p>
           <div>
-            <a href="" className="flex space-x-2 ">
-              <p>CV</p>
-              <img src={assets.hyperlink} alt="hyperlink" className="-mb-1" />
-            </a>
-            <p>Linkedin</p>
-            <p>Github</p>
-            <p>Mail</p>
+            <LinkComponent title={"CV"} link="#"  />
+            <LinkComponent title={"Linkedin"} link="#"  />
+            <LinkComponent title={"Github"} link="#"  />
+            <LinkComponent title={"Mail"} link="#"  />
           </div>
         </div>
 
