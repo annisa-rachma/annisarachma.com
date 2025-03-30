@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 
 import "./App.css";
+import * as assets from "../src/assets"
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
             Hello there! My Name is <span className="text-black">
               Annisa.
             </span>{" "}
-            I like creating <span className="text-black">digital stuff,</span>
+            I like creating <span className="text-black">digital stuff, </span>
             and using the web as a creative playground.
             <br />
             <br />
@@ -24,7 +25,10 @@ function App() {
             <span className="text-black"> books.</span>
           </p>
           <div>
-            <p>CV</p>
+            <a href="" className="flex space-x-2 ">
+              <p>CV</p>
+              <img src={assets.hyperlink} alt="hyperlink" className="-mb-1" />
+            </a>
             <p>Linkedin</p>
             <p>Github</p>
             <p>Mail</p>
