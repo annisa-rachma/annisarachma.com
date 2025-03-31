@@ -1,5 +1,3 @@
-// import { useState } from 'react'
-
 import "./App.css";
 // import * as assets from "../src/assets"
 import LinkComponent from "./components/LinkComponent";
@@ -9,7 +7,7 @@ function App() {
   return (
     <>
       <div className="w-screen max-w-[100vw] h-screen p-12 flex">
-        <div className="w-[30%] font-[roboto-serif] text-[1.4rem] p-6 text-grey flex flex-col justify-between text-left tracking-wide">
+        <div className="w-[35%] font-[roboto-serif] text-[1.4rem] p-6 text-grey flex flex-col justify-between text-left tracking-wide">
           <p className="">
             <span className="text-3xl">🍀</span> <br />
             <br />
@@ -34,7 +32,7 @@ function App() {
           </div>
         </div>
 
-        <div className=" w-[70%] p-6">
+        <div className=" w-[65%] p-6">
 
         </div>
       </div>
