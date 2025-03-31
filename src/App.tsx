@@ -5,8 +5,8 @@ import LinkComponent from "./components/LinkComponent";
 function App() {
   return (
     <>
-      <div className="w-screen max-w-[100vw] h-screen p-12 flex">
-        <div className="w-[35%] font-[roboto-serif] text-[1.4rem] p-6 text-grey flex flex-col justify-between text-left tracking-wide">
+      <div className="w-screen max-w-[100vw] h-screen p-12 flex ">
+        <div className="w-[35%] font-[roboto-serif] text-[1.4rem] p-6 text-grey flex flex-col justify-between text-left tracking-wide ">
           <p className="">
             <span className="text-3xl">🍀</span> <br />
             <br />
@@ -40,7 +40,20 @@ function App() {
           </div>
         </div>
 
-        <div className=" w-[65%] p-6"></div>
+        <div className=" w-[65%] p-6 grid grid-cols-2 space-x-4 space-y-4 overflow-y-auto h-screen no-scrollbar">
+          <div className="bg-[#F6F6F6] col-span-2 rounded-2xl h-[400px]">
+            a
+          </div>
+          <div className="bg-[#F6F6F6] h-[400px] w-[400px] rounded-2xl">
+            a
+          </div>
+          <div className="bg-[#F6F6F6] h-[400px] w-[400px] rounded-2xl">
+            a
+          </div>
+          <div className="bg-[#F6F6F6] h-[400px] col-span-2 rounded-2xl">
+            a
+          </div>
+        </div>
       </div>
     </>
   );
