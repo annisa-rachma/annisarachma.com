@@ -2,7 +2,6 @@ import "./App.css";
 // import * as assets from "../src/assets"
 import LinkComponent from "./components/LinkComponent";
 
-
 function App() {
   return (
     <>
@@ -25,16 +24,23 @@ function App() {
             <span className="text-black"> books.</span>
           </p>
           <div>
-            <LinkComponent title={"CV"} link="#"  />
-            <LinkComponent title={"Linkedin"} link="#"  />
-            <LinkComponent title={"Github"} link="#"  />
-            <LinkComponent title={"Mail"} link="#"  />
+            <LinkComponent title={"CV"} link="" />
+            <LinkComponent
+              title={"Linkedin"}
+              link="https://www.linkedin.com/in/annisa-rachma/"
+            />
+            <LinkComponent
+              title={"Github"}
+              link="https://github.com/annisa-rachma/"
+            />
+            <LinkComponent
+              title={"Mail"}
+              link="mailto:saa.annisa15@gmail.com"
+            />
           </div>
         </div>
 
-        <div className=" w-[65%] p-6">
-
-        </div>
+        <div className=" w-[65%] p-6"></div>
       </div>
     </>
   );
