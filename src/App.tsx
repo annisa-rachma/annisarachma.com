@@ -29,20 +29,20 @@ function App() {
           </div>
           
 
-          <div className="static w-[100%] h-[100vh] overflow-y-auto no-scrollbar pt-[64px] pr-[64px] pb-[64px] pl-[550px]"
+          <div id="works" className="static w-[100%] h-[100vh] overflow-y-auto no-scrollbar pt-[64px] pr-[64px] pb-[64px] pl-[45%] grid grid-cols-2 gap-4 grid-flow-row "
           
           >
-            <div className="bg-[#F6F6F6] col-span-2 rounded-2xl h-[400px]">
-              a
+            <div className="bg-[#F6F6F6] aspect-[2/1] col-span-2 rounded-2xl ">
+              
             </div>
-            <div className="bg-[#F6F6F6] h-[400px] w-[400px] rounded-2xl">
-              a
+            <div className="bg-[#F6F6F6] aspect-square  rounded-2xl">
+              
             </div>
-            <div className="bg-[#F6F6F6] h-[400px] w-[400px] rounded-2xl">
-              a
+            <div className="bg-[#F6F6F6] aspect-square h rounded-2xl">
+              
             </div>
-            <div className="bg-[#F6F6F6] h-[400px] col-span-2 rounded-2xl">
-              a
+            <div className="bg-[#F6F6F6] aspect-[2/1] col-span-2 rounded-2xl">
+              
             </div>
           </div>
 
