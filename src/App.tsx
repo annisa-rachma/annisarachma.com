@@ -45,7 +45,7 @@ function App() {
 
           <div
             id="works"
-            className=" w-[100%] lg:h-[100vh] lg:overflow-y-auto no-scrollbar lg:pt-[64px] pr-[64px] pb-[64px] pl-[64px] lg:pl-[45%] grid grid-cols-2 gap-4 grid-flow-row "
+            className=" w-[100%] lg:h-[100vh] lg:overflow-y-auto no-scrollbar lg:pt-[64px] pr-[64px] pb-[64px] pl-[64px] lg:pl-[45%] grid lg:grid-cols-2 gap-4 grid-flow-row "
           >
             <div className="bg-[#F6F6F6] aspect-[2/1] col-span-2 rounded-2xl "></div>
             <div className="bg-[#F6F6F6] aspect-square  rounded-2xl"></div>
