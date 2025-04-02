@@ -4,13 +4,14 @@ import * as assets from "../../assets"
 
 interface ProjectPreviewProps {
   bgColor?: string;
-  aspect: "square" | "2/1" | string;
+  aspect: "square" | string;
   colSpan?: number;
   children?: React.ReactNode;
   className?: string;
   tags: string[];
   title: string;
-  link: string
+  link: string;
+  image: keyof typeof assets
 }
 
 export default function ProjectPreview({
@@ -21,7 +22,8 @@ export default function ProjectPreview({
   className = "",
   tags,
   title,
-  link
+  link,
+  image
 }: ProjectPreviewProps) {
   const colSpanClass = colSpan ? `col-span-${colSpan}` : "";
   const aspectClass =
@@ -29,20 +31,23 @@ export default function ProjectPreview({
 
   return (
     <div
-      className={`${className} bg-[${bgColor}] ${aspectClass} ${colSpanClass} rounded-2xl cursor-pointer relative group p-4`}
+      className={`${className} bg-[${bgColor}] ${aspectClass} ${colSpanClass} rounded-2xl cursor-pointer relative group `}
     >
       {children}
 
-      <div className="flex gap-2">
+      <div className="absolute top-4 left-4 flex gap-2 ">
         {tags.map((tag, index) => {
           return <ProjectTag value={tag} key={index} />;
         })}
       </div>
       <div className="absolute bottom-4 left-4 right-5 flex justify-between items-center z-10 text-white font-medium font-[lato] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <p className="text-lg">{title}</p>
-        <a href={link} className="" target="_blank">
-            <img src={assets.hyperlinkWhite} alt="hyperlink" />
+        <a href={link} className="transform hover:scale-110 duration-300" target="_blank" rel="noopener noreferer">
+            <img src={assets.hyperlinkWhite} alt="hyperlink" className="" />
         </a>
+      </div>
+      <div className="w-full h-full">
+        <img className="w-full h-full rounded-2xl object-cover" src={assets[image]} alt="" />
       </div>
       <div
         className="
@@ -62,6 +67,7 @@ export default function ProjectPreview({
         rounded-bl-2xl
       "
       />
+      
     </div>
   );
 }

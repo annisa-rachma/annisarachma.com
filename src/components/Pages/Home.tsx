@@ -1,6 +1,7 @@
 import LinkComponent from "../Components/LinkComponent";
 import ProjectPreview from "../Components/ProjectPreview";
 
+
 export default function Home() {
   return (
     <>
@@ -48,15 +49,17 @@ export default function Home() {
               tags={["Design", "Development"]}
               title="Plant Shop"
               link=""
+              image="projectsA"
             />
             <ProjectPreview
               aspect="square"
               tags={["Design", "Development"]}
               title="Project A"
               link=""
+              image="projectsB"
             ></ProjectPreview>
-            <ProjectPreview aspect="square" tags={["Design"]} title="Project B" link=""></ProjectPreview>
-            <ProjectPreview aspect="2/1" colSpan={2} tags={["Design"]} title="Project A" link="" />
+            <ProjectPreview aspect="square" tags={["Design"]} title="Project B" link="" image="projectsB" ></ProjectPreview>
+            <ProjectPreview aspect="2/1" colSpan={2} tags={["Design"]} title="Project A" link=""  image="projectsB"/>
           </div>
         </div>
       </div>
