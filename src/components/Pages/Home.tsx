@@ -1,10 +1,10 @@
-import LinkComponent from '../Components/LinkComponent'
-
+import LinkComponent from "../Components/LinkComponent";
+import ProjectPreview from "../Components/ProjectPreview";
 
 export default function Home() {
   return (
     <>
-    <div className="h-[100vh] w-full  relative max-w-[1350px] m-auto p-0 ">
+      <div className="h-[100vh] w-full  relative max-w-[1350px] m-auto p-0 ">
         <div className=" flex flex-col lg:flex-row  w-full ">
           <div className=" font-[roboto-serif] text-[1.4rem] text-grey tracking-wide lg:absolute left-[64px] flex flex-col lg:justify-between lg:h-[100vh] p-[64px] lg:w-[35%] w-[full] lg:pl-0 lg:pr-0 gap-12 ">
             <div className="w-[100%] md:w-[70%] lg:w-[100%]">
@@ -25,7 +25,6 @@ export default function Home() {
               </p>
             </div>
             <div className="w-[100%] ">
-
               <LinkComponent title={"CV"} link="" />
               <LinkComponent
                 title={"Linkedin"}
@@ -46,14 +45,13 @@ export default function Home() {
             id="works"
             className=" w-[100%] lg:h-[100vh] lg:overflow-y-auto no-scrollbar lg:pt-[64px] pr-[64px] pb-[64px] pl-[64px] lg:pl-[45%] grid lg:grid-cols-2 gap-4 grid-flow-row "
           >
-            <div className="bg-[#F6F6F6] aspect-[2/1] col-span-2 rounded-2xl "></div>
-            <div className="bg-[#F6F6F6] aspect-square  rounded-2xl"></div>
-            <div className="bg-[#F6F6F6] aspect-square h rounded-2xl"></div>
-            <div className="bg-[#F6F6F6] aspect-[2/1] col-span-2 rounded-2xl "></div>
+            <ProjectPreview aspect="2/1" colSpan={2} />
+            <ProjectPreview aspect="square"></ProjectPreview>
+            <ProjectPreview aspect="square"></ProjectPreview>
+            <ProjectPreview aspect="2/1" colSpan={2} />
           </div>
         </div>
       </div>
     </>
-  
-  )
+  );
 }
