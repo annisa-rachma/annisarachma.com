@@ -41,13 +41,22 @@ export default function Home() {
             </div>
           </div>
 
-          <div
-            className=" w-[100%] lg:h-[100vh] lg:overflow-y-auto no-scrollbar lg:pt-[64px] pr-[64px] pb-[64px] pl-[64px] lg:pl-[45%] grid grid-cols-2 gap-4 grid-flow-row "
-          >
-            <ProjectPreview aspect="2/1" colSpan={2} tags={["Design", "Development"]} />
-            <ProjectPreview aspect="square" tags={["Design", "Development"]}></ProjectPreview>
-            <ProjectPreview aspect="square" tags={["Design"]}></ProjectPreview>
-            <ProjectPreview aspect="2/1" colSpan={2} tags={["Design"]}/>
+          <div className=" w-[100%] lg:h-[100vh] lg:overflow-y-auto no-scrollbar lg:pt-[64px] pr-[64px] pb-[64px] pl-[64px] lg:pl-[45%] grid grid-cols-2 gap-4 grid-flow-row ">
+            <ProjectPreview
+              aspect="2/1"
+              colSpan={2}
+              tags={["Design", "Development"]}
+              title="Plant Shop"
+              link=""
+            />
+            <ProjectPreview
+              aspect="square"
+              tags={["Design", "Development"]}
+              title="Project A"
+              link=""
+            ></ProjectPreview>
+            <ProjectPreview aspect="square" tags={["Design"]} title="Project B" link=""></ProjectPreview>
+            <ProjectPreview aspect="2/1" colSpan={2} tags={["Design"]} title="Project A" link="" />
           </div>
         </div>
       </div>
