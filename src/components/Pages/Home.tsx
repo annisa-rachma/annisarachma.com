@@ -42,13 +42,12 @@ export default function Home() {
           </div>
 
           <div
-            id="works"
-            className=" w-[100%] lg:h-[100vh] lg:overflow-y-auto no-scrollbar lg:pt-[64px] pr-[64px] pb-[64px] pl-[64px] lg:pl-[45%] grid lg:grid-cols-2 gap-4 grid-flow-row "
+            className=" w-[100%] lg:h-[100vh] lg:overflow-y-auto no-scrollbar lg:pt-[64px] pr-[64px] pb-[64px] pl-[64px] lg:pl-[45%] grid grid-cols-2 gap-4 grid-flow-row "
           >
-            <ProjectPreview aspect="2/1" colSpan={2} />
-            <ProjectPreview aspect="square"></ProjectPreview>
-            <ProjectPreview aspect="square"></ProjectPreview>
-            <ProjectPreview aspect="2/1" colSpan={2} />
+            <ProjectPreview aspect="2/1" colSpan={2} tags={["Design", "Development"]} />
+            <ProjectPreview aspect="square" tags={["Design", "Development"]}></ProjectPreview>
+            <ProjectPreview aspect="square" tags={["Design"]}></ProjectPreview>
+            <ProjectPreview aspect="2/1" colSpan={2} tags={["Design"]}/>
           </div>
         </div>
       </div>
