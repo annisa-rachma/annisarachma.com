@@ -1,5 +1,4 @@
-import React from 'react'
-import LinkComponent from '../LinkComponent'
+import LinkComponent from '../Components/LinkComponent'
 
 
 export default function Home() {
