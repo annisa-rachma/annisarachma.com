@@ -47,15 +47,16 @@ export default function Home() {
               colSpan={2}
               tags={["Design", "Development"]}
               title="Plant Shop"
-              link=""
+              link="#"
               image="projectsA"
               slug="what-to-cook"
+              className="col-span-2 aspect-[2/1]"
             />
             <ProjectPreview
               aspect="square"
               tags={["Design", "Development"]}
               title="Project A"
-              link=""
+              link="#"
               image="projectsB"
               slug="what-to-cook"
             ></ProjectPreview>
@@ -63,7 +64,7 @@ export default function Home() {
               aspect="square"
               tags={["Design"]}
               title="Project B"
-              link=""
+              link="#"
               image="projectsB"
               slug="what-to-cook"
             ></ProjectPreview>
@@ -72,9 +73,10 @@ export default function Home() {
               colSpan={2}
               tags={["Design"]}
               title="Project A"
-              link=""
+              link="#"
               image="projectsB"
               slug="what-to-cook"
+              className="col-span-2 aspect-[2/1]"
             />
           </div>
         </div>

@@ -1,0 +1,16 @@
+
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev  
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true  # Required for file watching in Docker
+      - VITE_HOST=0.0.0.0
+    volumes:
+      - ./:/src
+      - /src/node_modules  # Preserve container modules
+    command: npm run dev 

@@ -24,7 +24,7 @@ export default function ProjectPreview({
   className = "",
   tags,
   title,
-  link,
+  link= "#",
   image,
   slug,
 }: ProjectPreviewProps) {
@@ -46,22 +46,22 @@ export default function ProjectPreview({
       </div>
       <div className="absolute bottom-4 left-4 right-5 flex justify-between items-center z-10 text-white font-medium font-[lato] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <p className="text-lg">{title}</p>
-        <a
+        <button
           href={link}
           className="transform hover:scale-110 duration-300"
           target="_blank"
           rel="noopener noreferer"
         >
           <img src={assets.hyperlinkWhite} alt="hyperlink" className="" />
-        </a>
+        </button>
       </div>
-      <div className="w-full h-full">
+      {/* <div className="w-full h-full"> */}
         <img
-          className="w-full h-full rounded-2xl object-cover"
+          className=" inset-0 w-full h-full rounded-2xl object-cover"
           src={assets[image]}
           alt=""
         />
-      </div>
+      {/* </div> */}
       <div
         className="
         absolute 
