@@ -47,10 +47,11 @@ export default function ProjectPreview({
       <div className="absolute bottom-4 left-4 right-5 flex justify-between items-center z-10 text-white font-medium font-[lato] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
         <p className="text-lg">{title}</p>
         <button
-          href={link}
+        //   href={link}
+          onClick={() => window.open(link, '_blank')}
           className="transform hover:scale-110 duration-300"
-          target="_blank"
-          rel="noopener noreferer"
+        //   target="_blank"
+        //   rel="noopener noreferer"
         >
           <img src={assets.hyperlinkWhite} alt="hyperlink" className="" />
         </button>
