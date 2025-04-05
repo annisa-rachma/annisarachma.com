@@ -4,5 +4,5 @@ services:
     platform: linux/amd64
     container_name: portfolio-site
     ports:
-      - "80:80"
+      - "8080:80"
     restart: always
