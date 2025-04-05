@@ -22,8 +22,14 @@ services:
     image: ghcr.io/annisa-rachma/annisarachma.com:latest
     container_name: portfolio-app
     labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.react.rule=Host(`annisarachma.com`)"
-      - "traefik.http.routers.react.entrypoints=websecure"
-      - "traefik.http.routers.react.tls.certresolver=letsencrypt"
-      - "traefik.http.services.react.loadbalancer.server.port=80"
+        - "traefik.enable=true"
+        - "traefik.http.routers.react.rule=Host(`annisarachma.com`)"
+        - "traefik.http.routers.react.entrypoints=web"
+        - "traefik.http.routers.react.middlewares=https-redirect@docker"
+        - "traefik.http.routers.react-secure.rule=Host(`annisarachma.com`)"
+        - "traefik.http.routers.react-secure.entrypoints=websecure"
+        - "traefik.http.routers.react-secure.tls.certresolver=letsencrypt"
+        - "traefik.http.services.react.loadbalancer.server.port=80"
+        
+        # Middleware: redirect HTTP -> HTTPS
+        - "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
