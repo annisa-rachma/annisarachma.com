@@ -1,6 +1,7 @@
 services:
   portfolio-site:
     image: ghcr.io/annisa-rachma/annisarachma.com:v.1.0
+    platform: linux/amd64
     container_name: portfolio-site
     ports:
       - "80:80"
