@@ -18,13 +18,13 @@ services:
       - "traefik.http.routers.traefik.entrypoints=websecure"
       - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
     networks:
-      - web
+      - traefik_network
 
   app:
     image: ghcr.io/annisa-rachma/annisarachma.com:latest
     container_name: portfolio-app
     networks:
-      - web
+      - traefik_network
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.react.rule=Host(`annisarachma.com`)"
@@ -33,6 +33,5 @@ services:
       - "traefik.http.services.react.loadbalancer.server.port=8080"
 
 networks:
-  web:
-    driver: bridge
-    
+  traefik_network:
+    external: true
