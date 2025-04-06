@@ -30,7 +30,7 @@ services:
       - "traefik.http.routers.react.rule=Host(`annisarachma.com`)"
       - "traefik.http.routers.react.entrypoints=websecure"
       - "traefik.http.routers.react.tls.certresolver=letsencrypt"
-      - "traefik.http.services.react.loadbalancer.server.port=80"
+      - "traefik.http.services.react.loadbalancer.server.port=8080"
 
 networks:
   web:
