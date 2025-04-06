@@ -35,5 +35,4 @@ services:
 networks:
   web:
     driver: bridge
-    #name: web
-    #attachable: true
+    
