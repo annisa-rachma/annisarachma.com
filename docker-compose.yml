@@ -17,7 +17,7 @@ services:
       - "443:443"
       - "8080:8080"
     volumes:
-      - letsencrypt:/letsencrypt
+      #- letsencrypt:/letsencrypt
       - /var/run/docker.sock:/var/run/docker.sock
 
   app:
@@ -25,9 +25,9 @@ services:
     container_name: portfolio-app
     labels:
         - "traefik.enable=true"
-        - "traefik.http.routers.guestbook.rule=Host(`annisarachma.com`)"
-        - "traefik.http.routers.guestbook.entrypoints=websecure"
-        - "traefik.http.routers.guestbook.tls.certresolver=myresolver"
+        - "traefik.http.routers.app.rule=Host(`annisarachma.com`)"
+        - "traefik.http.routers.app.entrypoints=websecure"
+        - "traefik.http.routers.app.tls.certresolver=myresolver"
         
         # Middleware: redirect HTTP -> HTTPS
         #- "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
