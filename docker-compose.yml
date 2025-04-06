@@ -21,17 +21,17 @@ services:
     networks:
       - traefik_network
 
-  app:
+  portfolio:
     image: ghcr.io/annisa-rachma/annisarachma.com:latest
-    container_name: portfolio-app
+    container_name: portfolio
     networks:
       - traefik_network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.react.rule=Host(`annisarachma.com`)"
-      - "traefik.http.routers.react.entrypoints=websecure"
-      - "traefik.http.routers.react.tls.certresolver=letsencrypt"
-      - "traefik.http.services.react.loadbalancer.server.port=8080"
+      - "traefik.http.routers.portfolio.rule=Host(`annisarachma.com`)"
+      - "traefik.http.routers.portfolio.entrypoints=websecure"
+      - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
+      - "traefik.http.services.portfolio.loadbalancer.server.port=8080"
 
 networks:
   traefik_network:
