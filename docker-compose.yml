@@ -3,31 +3,27 @@ services:
     image: traefik:v3.0
     container_name: traefik
     command:
-      - "--providers.docker"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entryPoints.websecure.address=:443"
-      - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
-      - "--certificatesresolvers.myresolver.acme.email=saa.annisa15@gmail.com"
-      - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
-      - "--entrypoints.web.address=:80"
-      - "--entrypoints.web.http.redirections.entrypoint.to=websecure"
-      - "--entrypoints.web.http.redirections.entrypoint.scheme=https"
+      - "--configFile=/etc/traefik/traefik.yml"
     ports:
       - "80:80"
       - "443:443"
-      - "8080:8080"
     volumes:
-      #- letsencrypt:/letsencrypt
-      - /var/run/docker.sock:/var/run/docker.sock
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./traefik/traefik.yml:/etc/traefik/traefik.yml:ro"
+      - "./traefik/acme.json:/letsencrypt/acme.json"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.annisarachma.com`)"
+      - "traefik.http.routers.traefik.service=api@internal"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
 
   app:
     image: ghcr.io/annisa-rachma/annisarachma.com:latest
     container_name: portfolio-app
     labels:
-        - "traefik.enable=true"
-        - "traefik.http.routers.app.rule=Host(`annisarachma.com`)"
-        - "traefik.http.routers.app.entrypoints=websecure"
-        - "traefik.http.routers.app.tls.certresolver=myresolver"
-        
-        # Middleware: redirect HTTP -> HTTPS
-        #- "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
+      - "traefik.enable=true"
+      - "traefik.http.routers.react.rule=Host(`annisarachma.com`)"
+      - "traefik.http.routers.react.entrypoints=websecure"
+      - "traefik.http.routers.react.tls.certresolver=letsencrypt"
+      - "traefik.http.services.react.loadbalancer.server.port=80"
