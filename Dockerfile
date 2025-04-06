@@ -11,4 +11,4 @@ WORKDIR /app
 RUN npm install -g http-server
 COPY --from=build /app/dist /app
 EXPOSE 8080
-CMD ["http-server", ".", "-p", "80"]
+CMD ["http-server", ".", "-p", "8080"]
