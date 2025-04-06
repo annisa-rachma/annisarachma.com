@@ -10,5 +10,5 @@ FROM node:18-alpine
 WORKDIR /app
 RUN npm install -g http-server
 COPY --from=build /app/dist /app
-EXPOSE 8080
+EXPOSE 80
 CMD ["http-server", ".", "-p", "80"]
