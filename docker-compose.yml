@@ -18,6 +18,8 @@ services:
       - "traefik.http.routers.traefik.service=api@internal"
       - "traefik.http.routers.traefik.entrypoints=websecure"
       - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
+    networks:
+      - web
 
   app:
     image: ghcr.io/annisa-rachma/annisarachma.com:latest
@@ -33,4 +35,7 @@ services:
         - "traefik.http.services.react.loadbalancer.server.port=8080"
         
         # Middleware: redirect HTTP -> HTTPS
-        - "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
+        #- "traefik.http.middlewares.https-redirect.redirectscheme.scheme=https"
+networks:
+  web:
+    external: true
