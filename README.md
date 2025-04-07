@@ -1,5 +1,5 @@
 # Personal Portfolio
 
 You can check it out here :
-[link :][https://annisarachma.com]
+[Personal portfolio](https://annisarachma.com)
 
