@@ -1,25 +1,4 @@
 services:
-  traefik:
-    image: traefik:v3.0
-    container_name: traefik
-    command:
-      - "--configFile=/etc/traefik/traefik.yml"
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "./traefik/traefik.yml:/etc/traefik/traefik.yml:ro"
-      - "./traefik/acme.json:/letsencrypt/acme.json"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`traefik.annisarachma.com`)"
-      - "traefik.http.routers.traefik.service=api@internal"
-      - "traefik.http.routers.traefik.entrypoints=websecure"
-      - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
-    networks:
-      - traefik_network
-
   portfolio:
     image: ghcr.io/annisa-rachma/annisarachma.com:latest
     container_name: portfolio
@@ -30,6 +9,10 @@ services:
       - "traefik.http.routers.portfolio.rule=Host(`annisarachma.com`)"
       - "traefik.http.routers.portfolio.entrypoints=websecure"
       - "traefik.http.routers.portfolio.tls.certresolver=letsencrypt"
+
+      - "traefik.http.routers.portfolio-http.rule=Host(`annisarachma.com`)"
+      - "traefik.http.routers.portfolio-http.entrypoints=web"
+
       - "traefik.http.services.portfolio.loadbalancer.server.port=80"
 
 networks:
