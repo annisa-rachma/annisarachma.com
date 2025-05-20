@@ -12,8 +12,11 @@ services:
 
       - "traefik.http.routers.portfolio-http.rule=Host(`annisarachma.com`)"
       - "traefik.http.routers.portfolio-http.entrypoints=web"
+      - "traefik.http.routers.portfolio-http.middlewares=redirect-to-https"
 
       - "traefik.http.services.portfolio.loadbalancer.server.port=80"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+
 
 networks:
   traefik_network:
