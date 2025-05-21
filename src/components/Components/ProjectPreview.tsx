@@ -1,7 +1,7 @@
 import React from "react";
 import ProjectTag from "./ProjectTag";
 import * as assets from "../../assets";
-import { Link } from "react-router";
+// import { Link } from "react-router";
 
 interface ProjectPreviewProps {
   bgColor?: string;
@@ -12,7 +12,7 @@ interface ProjectPreviewProps {
   tags: string[];
   title: string;
   link: string;
-  image: keyof typeof assets;
+  video: keyof typeof assets;
   slug: string;
 }
 
@@ -24,18 +24,18 @@ export default function ProjectPreview({
   className = "",
   tags,
   title,
-  link= "#",
-  image,
-  slug,
+  link = "#",
+  video,
+  // slug,
 }: ProjectPreviewProps) {
   const colSpanClass = colSpan ? `col-span-${colSpan}` : "";
   const aspectClass =
     aspect === "square" ? "aspect-square" : `aspect-[${aspect}] `;
 
   return (
-    <Link
-      to={`/projects/${slug}`}
-      className={`${className} bg-[${bgColor}] ${aspectClass} ${colSpanClass} rounded-2xl cursor-pointer relative group `}
+    <div
+      // to={`/projects/${slug}`}
+      className={`${className} bg-[${bgColor}] ${aspectClass} ${colSpanClass} border border-gray-100 rounded-2xl   relative group `}
     >
       {children}
 
@@ -45,24 +45,39 @@ export default function ProjectPreview({
         })}
       </div>
       <div className="absolute bottom-4 left-4 right-5 flex justify-between items-center z-10 text-white font-medium font-[lato] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <p className="text-lg">{title}</p>
+        <div>
+          <p className="text-lg">{title}</p>
+          <div>
+            lorem ipsum dor sel amet
+          </div>
+        </div>
         <button
-        //   href={link}
-          onClick={() => window.open(link, '_blank')}
-          className="transform hover:scale-110 duration-300"
-        //   target="_blank"
-        //   rel="noopener noreferer"
+          //   href={link}
+          onClick={() => window.open(link, "_blank")}
+          className="transform hover:scale-110 duration-300 cursor-pointer"
+          //   target="_blank"
+          //   rel="noopener noreferer"
         >
           <img src={assets.hyperlinkWhite} alt="hyperlink" className="" />
         </button>
       </div>
-      {/* <div className="w-full h-full"> */}
-        <img
+      <div className="w-full h-full">
+        {/* <img
           className=" inset-0 w-full h-full rounded-2xl object-cover"
           src={assets[image]}
           alt=""
-        />
-      {/* </div> */}
+        /> */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{ width: "auto", height: "100%" }}
+          className=" inset-0 w-full h-full rounded-2xl   object-cover "
+        >
+          <source src={assets[video]} type="video/mp4" />
+        </video>
+      </div>
       <div
         className="
         absolute 
@@ -71,7 +86,7 @@ export default function ProjectPreview({
         right-0 
         h-2/3 
         bg-gradient-to-t 
-        from-black/30 
+        from-black/50 
         to-transparent 
         opacity-0 
         group-hover:opacity-100 
@@ -79,8 +94,9 @@ export default function ProjectPreview({
         duration-300
         rounded-br-2xl 
         rounded-bl-2xl
+        
       "
       />
-    </Link>
+    </div>
   );
 }

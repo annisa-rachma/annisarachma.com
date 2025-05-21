@@ -45,39 +45,40 @@ export default function Home() {
             <ProjectPreview
               aspect="2/1"
               colSpan={2}
-              tags={["Design", "Development"]}
-              title="Plant Shop"
-              link="#"
-              image="projectsA"
-              slug="what-to-cook"
+              tags={["React", "Express JS"]}
+              title="Plantasia"
+              link="https://plantasia.annisarachma.com/"
+              video="plantasia"
+              slug="plantasia"
               className="col-span-2 aspect-[2/1]"
             />
             <ProjectPreview
-              aspect="square"
+              aspect="2/1"
               tags={["Design", "Development"]}
-              title="Project A"
-              link="#"
-              image="projectsB"
-              slug="what-to-cook"
-            ></ProjectPreview>
-            <ProjectPreview
-              aspect="square"
-              tags={["Design"]}
-              title="Project B"
-              link="#"
-              image="projectsB"
-              slug="what-to-cook"
+              title="Plantasia Admin"
+              link="https://plantasia-admin.annisarachma.com/"
+              video="plantasiaAdmin"
+              slug="plantasia-admin"
+              className="col-span-2 aspect-[2/1]"
             ></ProjectPreview>
             <ProjectPreview
               aspect="2/1"
               colSpan={2}
-              tags={["Design"]}
-              title="Project A"
-              link="#"
-              image="projectsB"
-              slug="what-to-cook"
+              tags={["React", "Express JS"]}
+              title="Genshin Info"
+              link="https://genshin.annisarachma.com/"
+              video="genshin"
+              slug="genshin"
               className="col-span-2 aspect-[2/1]"
             />
+            {/* <ProjectPreview
+              aspect="square"
+              tags={["Design"]}
+              title="Project B"
+              link="#"
+              video="projectsB"
+              slug="what-to-cook"
+            ></ProjectPreview> */}
           </div>
         </div>
       </div>
