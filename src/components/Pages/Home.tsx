@@ -45,31 +45,34 @@ export default function Home() {
             <ProjectPreview
               aspect="2/1"
               colSpan={2}
-              tags={["React", "Express JS"]}
+              tags={["React", "Express JS", "PostgreSQL"]}
               title="Plantasia"
               link="https://plantasia.annisarachma.com/"
               video="plantasia"
-              slug="plantasia"
+              // slug="plantasia"
               className="col-span-2 aspect-[2/1]"
+              description="Developed and designed a mockup e-plant shop website, featuring a clean UI for browsing and purchasing plants online"
             />
             <ProjectPreview
               aspect="2/1"
-              tags={["Design", "Development"]}
+              tags={["React", "Express JS", "PostgreSQL"]}
               title="Plantasia Admin"
               link="https://plantasia-admin.annisarachma.com/"
               video="plantasiaAdmin"
-              slug="plantasia-admin"
+              // slug="plantasia-admin"
               className="col-span-2 aspect-[2/1]"
+              description="Built and designed the admin dashboard for Plantasia to manage products, orders, and user data efficiently."
             ></ProjectPreview>
             <ProjectPreview
               aspect="2/1"
               colSpan={2}
-              tags={["React", "Express JS"]}
+              tags={["Vue", "Express JS"]}
               title="Genshin Info"
               link="https://genshin.annisarachma.com/"
               video="genshin"
-              slug="genshin"
+              // slug="genshin"
               className="col-span-2 aspect-[2/1]"
+              description="Created a Genshin Impact fan website showcasing character information, an interactive map, and mini puzzle games for user engagement."
             />
             {/* <ProjectPreview
               aspect="square"

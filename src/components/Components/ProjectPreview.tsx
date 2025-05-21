@@ -13,7 +13,8 @@ interface ProjectPreviewProps {
   title: string;
   link: string;
   video: keyof typeof assets;
-  slug: string;
+  // slug: string;
+  description: string
 }
 
 export default function ProjectPreview({
@@ -27,6 +28,7 @@ export default function ProjectPreview({
   link = "#",
   video,
   // slug,
+  description
 }: ProjectPreviewProps) {
   const colSpanClass = colSpan ? `col-span-${colSpan}` : "";
   const aspectClass =
@@ -44,17 +46,17 @@ export default function ProjectPreview({
           return <ProjectTag value={tag} key={index} />;
         })}
       </div>
-      <div className="absolute bottom-4 left-4 right-5 flex justify-between items-center z-10 text-white font-medium font-[lato] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        <div>
+      <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center z-10 text-white font-medium font-[lato] opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-4">
+        <div className="">
           <p className="text-lg">{title}</p>
           <div>
-            lorem ipsum dor sel amet
+            {description}
           </div>
         </div>
         <button
           //   href={link}
           onClick={() => window.open(link, "_blank")}
-          className="transform hover:scale-110 duration-300 cursor-pointer"
+          className="transform hover:scale-110 duration-300 cursor-pointer w-[50px] -mr-3"
           //   target="_blank"
           //   rel="noopener noreferer"
         >
