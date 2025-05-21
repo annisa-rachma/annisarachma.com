@@ -46,17 +46,17 @@ export default function ProjectPreview({
           return <ProjectTag value={tag} key={index} />;
         })}
       </div>
-      <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center z-10 text-white font-medium font-[lato] opacity-0 group-hover:opacity-100 transition-opacity duration-300 gap-4">
+      <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center z-10 text-white font-medium font-[lato] lg:opacity-0 lg:group-hover:opacity-100 opacity-100 transition-opacity duration-300 gap-4 ">
         <div className="">
-          <p className="text-lg">{title}</p>
-          <div>
+          <p className="lg:text-lg text-sm">{title}</p>
+          <div className="lg:text-sm text-[10px]">
             {description}
           </div>
         </div>
         <button
           //   href={link}
           onClick={() => window.open(link, "_blank")}
-          className="transform hover:scale-110 duration-300 cursor-pointer w-[50px] -mr-3"
+          className="transform hover:scale-110 duration-300 cursor-pointer lg:w-[50px] w-[25px] mr-2 lg:-mr-3"
           //   target="_blank"
           //   rel="noopener noreferer"
         >
@@ -88,10 +88,11 @@ export default function ProjectPreview({
         right-0 
         h-2/3 
         bg-gradient-to-t 
-        from-black/50 
+        from-black/70 
         to-transparent 
-        opacity-0 
-        group-hover:opacity-100 
+        lg:opacity-0 
+        lg:group-hover:opacity-100 
+        opacity-100 
         transition-opacity 
         duration-300
         rounded-br-2xl 

@@ -25,7 +25,7 @@ export default function Home() {
               </p>
             </div>
             <div className="w-[100%] ">
-              <LinkComponent title={"CV"} link="" />
+              <LinkComponent title={"CV"} link="https://drive.google.com/file/d/1BezF4S-R8l07r8ZfJPJXmdbsPBxgqmmJ/view?usp=sharing" />
               <LinkComponent
                 title={"Linkedin"}
                 link="https://www.linkedin.com/in/annisa-rachma/"
