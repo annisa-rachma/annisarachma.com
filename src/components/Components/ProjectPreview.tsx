@@ -56,7 +56,7 @@ export default function ProjectPreview({
         <button
           //   href={link}
           onClick={() => window.open(link, "_blank")}
-          className="transform hover:scale-110 duration-300 cursor-pointer lg:w-[50px] w-[25px] mr-2 lg:-mr-3"
+          className="transform hover:scale-110 duration-300 cursor-pointer lg:w-[50px] w-[25px] mr-2  lg:-mr-3"
           //   target="_blank"
           //   rel="noopener noreferer"
         >
