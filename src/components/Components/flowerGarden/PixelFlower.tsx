@@ -9,7 +9,7 @@ interface PixelFlowerProps {
   autoGrow?: boolean;
 }
 
-export default function PixelFlower({ index, onPlant, autoGrow = false }: PixelFlowerProps) {
+export default function PixelFlower({ autoGrow = false }: PixelFlowerProps) {
   const [stage, setStage] = useState<FlowerStage>(1);
   const [flowerType] = useState<FlowerType>(() => {
     const types: FlowerType[] = ["yellow", "pink", "blue", "daisy", "lavender"];
@@ -163,8 +163,8 @@ export default function PixelFlower({ index, onPlant, autoGrow = false }: PixelF
   // Helper function to render curved stem with specific variations
   const renderCurvedStem = (
     colors: Record<string, string>,
-    pixelSize: number,
-    variations: any,
+    _pixelSize: number,
+    variations: ReturnType<typeof getRandomVariations>,
     baseXOffset: number = 0
   ) => {
     const segments = [];
