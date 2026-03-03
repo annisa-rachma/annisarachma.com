@@ -1,5 +1,5 @@
 import LinkComponent from "../Components/LinkComponent";
-import ProjectPreview from "../Components/ProjectPreview";
+import FlowerGardenGame from "../Components/flowerGarden/FlowerGardenGame";
 
 export default function Home() {
   return (
@@ -41,47 +41,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className=" w-[100%] lg:h-[100vh] lg:overflow-y-auto no-scrollbar lg:pt-[64px] pr-[64px] pb-[64px] pl-[64px] lg:pl-[45%] grid grid-cols-2 gap-4 grid-flow-row ">
-            <ProjectPreview
-              aspect="2/1"
-              colSpan={2}
-              tags={["React", "Express JS", "PostgreSQL"]}
-              title="Plantasia"
-              link="https://plantasia.annisarachma.com/"
-              video="plantasia"
-              // slug="plantasia"
-              className="col-span-2 aspect-[2/1]"
-              description="Developed and designed a mockup e-plant shop website, featuring a clean UI for browsing and purchasing plants online"
-            />
-            <ProjectPreview
-              aspect="2/1"
-              tags={["React", "Express JS", "PostgreSQL"]}
-              title="Plantasia Admin"
-              link="https://plantasia-admin.annisarachma.com/"
-              video="plantasiaAdmin"
-              // slug="plantasia-admin"
-              className="col-span-2 aspect-[2/1]"
-              description="Built and designed the admin dashboard for Plantasia to manage products, orders, and user data efficiently."
-            ></ProjectPreview>
-            <ProjectPreview
-              aspect="2/1"
-              colSpan={2}
-              tags={["Vue", "Express JS"]}
-              title="Genshin Info"
-              link="https://genshin.annisarachma.com/"
-              video="genshin"
-              // slug="genshin"
-              className="col-span-2 aspect-[2/1]"
-              description="Created a Genshin Impact fan website showcasing character information, an interactive map, and mini puzzle games for user engagement."
-            />
-            {/* <ProjectPreview
-              aspect="square"
-              tags={["Design"]}
-              title="Project B"
-              link="#"
-              video="projectsB"
-              slug="what-to-cook"
-            ></ProjectPreview> */}
+          <div className=" w-[100%] lg:h-[100vh] lg:overflow-y-auto no-scrollbar lg:pt-[64px] pr-[64px] pb-[64px] pl-[64px] lg:pl-[45%] flex items-center justify-center">
+            <FlowerGardenGame />
           </div>
         </div>
       </div>
