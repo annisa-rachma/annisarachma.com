@@ -6,7 +6,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: annisa-rachma/annisarachma.com
+  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   build-and-push:
